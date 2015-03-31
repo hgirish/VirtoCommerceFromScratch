@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <meta name="title" content="@ViewBag.Title" />
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic-ext,cyrillic" />
+
+    <base href="~/" />
+</head>
+    <body>
+        <!--Disable ajax cache-->
+        <script>$(function () { $.ajaxSetup({ cache: false }); });</script>
+        <div id="layout">
+            <div class="demo-notice">
+                <p>@("This is a demo store. Any orders placed through this store will not be honored or fulfilled.")</p>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>
