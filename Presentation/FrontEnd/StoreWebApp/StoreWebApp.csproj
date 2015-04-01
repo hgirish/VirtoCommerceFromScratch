@@ -158,6 +158,84 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\themes\default\images\arrow_about.png" />
+    <Content Include="Content\themes\default\images\arrow_top.png" />
+    <Content Include="Content\themes\default\images\blank.gif" />
+    <Content Include="Content\themes\default\images\blank.png" />
+    <Content Include="Content\themes\default\images\cloudzoom\ajax-loader.gif" />
+    <Content Include="Content\themes\default\images\cloudzoom\blank.png" />
+    <Content Include="Content\themes\default\images\cvv.gif" />
+    <Content Include="Content\themes\default\images\flags\flags.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\arrow_about.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\arrow_button.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\arrow_footer.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\arrow_switch.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\arrow_switch_right.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\arrow_top.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\page-nav.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\pager.png" />
+    <Content Include="Content\themes\default\images\icons\arrows\sort.png" />
+    <Content Include="Content\themes\default\images\icons\breadcrumb.gif" />
+    <Content Include="Content\themes\default\images\icons\bullet.gif" />
+    <Content Include="Content\themes\default\images\icons\bullet.png" />
+    <Content Include="Content\themes\default\images\icons\callback.png" />
+    <Content Include="Content\themes\default\images\icons\cart-empty.png" />
+    <Content Include="Content\themes\default\images\icons\cart.png" />
+    <Content Include="Content\themes\default\images\icons\cart_listing.png" />
+    <Content Include="Content\themes\default\images\icons\compare.png" />
+    <Content Include="Content\themes\default\images\icons\date.png" />
+    <Content Include="Content\themes\default\images\icons\dropdown-arrow.png" />
+    <Content Include="Content\themes\default\images\icons\edit-mini.png" />
+    <Content Include="Content\themes\default\images\icons\edit.png" />
+    <Content Include="Content\themes\default\images\icons\email.png" />
+    <Content Include="Content\themes\default\images\icons\gift.png" />
+    <Content Include="Content\themes\default\images\icons\grid-mode.gif" />
+    <Content Include="Content\themes\default\images\icons\icon_cart_listing_mask.png" />
+    <Content Include="Content\themes\default\images\icons\insurance.png" />
+    <Content Include="Content\themes\default\images\icons\items.png" />
+    <Content Include="Content\themes\default\images\icons\list-mode.gif" />
+    <Content Include="Content\themes\default\images\icons\msg\error.gif" />
+    <Content Include="Content\themes\default\images\icons\msg\note.gif" />
+    <Content Include="Content\themes\default\images\icons\msg\notice.gif" />
+    <Content Include="Content\themes\default\images\icons\msg\success.gif" />
+    <Content Include="Content\themes\default\images\icons\order.png" />
+    <Content Include="Content\themes\default\images\icons\print.gif" />
+    <Content Include="Content\themes\default\images\icons\print.png" />
+    <Content Include="Content\themes\default\images\icons\rateit\delete.gif" />
+    <Content Include="Content\themes\default\images\icons\rateit\star.gif" />
+    <Content Include="Content\themes\default\images\icons\rating.png" />
+    <Content Include="Content\themes\default\images\icons\remove-popup.png" />
+    <Content Include="Content\themes\default\images\icons\remove.png" />
+    <Content Include="Content\themes\default\images\icons\reorder.png" />
+    <Content Include="Content\themes\default\images\icons\return.png" />
+    <Content Include="Content\themes\default\images\icons\search.png" />
+    <Content Include="Content\themes\default\images\icons\shipping.png" />
+    <Content Include="Content\themes\default\images\icons\social.png" />
+    <Content Include="Content\themes\default\images\icons\switch.png" />
+    <Content Include="Content\themes\default\images\icons\trash.png" />
+    <Content Include="Content\themes\default\images\icons\twitter.png" />
+    <Content Include="Content\themes\default\images\icons\view.png" />
+    <Content Include="Content\themes\default\images\icons\wishlist.png" />
+    <Content Include="Content\themes\default\images\labels.png" />
+    <Content Include="Content\themes\default\images\logo.png" />
+    <Content Include="Content\themes\default\images\menu\accessories.png" />
+    <Content Include="Content\themes\default\images\menu\cameras.png" />
+    <Content Include="Content\themes\default\images\menu\computers.png" />
+    <Content Include="Content\themes\default\images\menu\mobiles.png" />
+    <Content Include="Content\themes\default\images\slider\arrows.png" />
+    <Content Include="Content\themes\default\images\slider\blank.gif" />
+    <Content Include="Content\themes\default\images\slider\camera-loader.gif" />
+    <Content Include="Content\themes\default\images\slider\slides\1.jpg" />
+    <Content Include="Content\themes\default\images\slider\slides\2.jpg" />
+    <Content Include="Content\themes\default\images\slider\slides\3.jpg" />
+    <Content Include="Content\themes\default\images\social\facebook.png" />
+    <Content Include="Content\themes\default\images\social\google.png" />
+    <Content Include="Content\themes\default\images\social\linkedin.png" />
+    <Content Include="Content\themes\default\images\social\openid.png" />
+    <Content Include="Content\themes\default\images\social\twitter.png" />
+    <Content Include="Content\themes\default\images\social\yahoo.png" />
+    <Content Include="Content\themes\default\images\validation_advice_bg.gif" />
+    <Content Include="Content\themes\default\reset.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Icon.png" />
@@ -200,6 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomRazorViewEngine.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
@@ -210,6 +289,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Virto\Helpers\MVC\StoreStyle.cs" />
+    <Compile Include="Virto\Helpers\UserHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -217,6 +297,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\StoreParams.cshtml" />
+    <Content Include="Views\Shared\Languages.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

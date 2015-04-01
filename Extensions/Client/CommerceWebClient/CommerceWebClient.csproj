@@ -101,6 +101,10 @@
       <Project>{51175861-991B-4C73-8E08-D793F966B462}</Project>
       <Name>CommerceFoundation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CommerceClient\CommerceClient.csproj">
+      <Project>{BF659D12-8F96-4B07-99C8-7A4BA6D34DB0}</Project>
+      <Name>CommerceClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace StoreWebApp
@@ -11,7 +12,10 @@ namespace StoreWebApp
     {
         protected void Application_Start()
         {
+            ViewEngines.Engines.Clear(); 
+            ViewEngines.Engines.Add(new CustomRazorViewEngine());
             AreaRegistration.RegisterAllAreas();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }

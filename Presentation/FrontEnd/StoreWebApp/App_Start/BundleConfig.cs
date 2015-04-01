@@ -36,6 +36,22 @@ namespace StoreWebApp
                         "~/Content/themes/base/jquery.ui.spinner.css",
                         "~/Content/themes/base/jquery.ui.menu.css"));
 
+            bundles.Add(new StyleBundle("~/Content/themes/default/css").Include(
+               "~/Content/themes/default/reset.css"
+               //"~/Content/themes/default/custom.css",
+               //"~/Content/themes/default/grid.css",
+               //"~/Content/themes/default/forms.css",
+               //"~/Content/themes/default/popup.css",
+               //"~/Content/themes/default/transition.css",
+               //"~/Content/themes/default/main.css",
+               //"~/Content/themes/default/responsive.css",
+               //"~/Content/themes/default/camera.css",
+               //"~/Content/themes/default/cloudzoom.css",
+               //"~/Content/themes/default/messages.css",
+               //"~/Content/themes/default/rateit.css",
+               //"~/Content/themes/default/flags.css"
+               ));
+
         }
     }
 }
