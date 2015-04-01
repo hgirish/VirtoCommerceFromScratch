@@ -16,6 +16,16 @@ namespace StoreWebApp
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquerymisc").Include(
+        //"~/Scripts/v/virto-jquery.js",
+       // "~/Scripts/cloudzoom.js",
+       // "~/Scripts/ajaxq.js",
+        //"~/Scripts/jquery.rateit.js",
+       // "~/Scripts/v/virto-commerce.js",
+        "~/Scripts/responsive/main.js"
+       // "~/Scripts/v/validation.js"
+       ));
+
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
@@ -43,8 +53,8 @@ namespace StoreWebApp
                //"~/Content/themes/default/forms.css",
                //"~/Content/themes/default/popup.css",
                //"~/Content/themes/default/transition.css",
-               //"~/Content/themes/default/main.css",
-               //"~/Content/themes/default/responsive.css",
+               ,"~/Content/themes/default/main.css"
+              ,"~/Content/themes/default/responsive.css"
                //"~/Content/themes/default/camera.css",
                //"~/Content/themes/default/cloudzoom.css",
                //"~/Content/themes/default/messages.css",

@@ -1,4 +1,6 @@
-﻿@using CommerceWebClient
+﻿@using System.Globalization
+@using CommerceWebClient
+@using RouteConstatnts = CommerceWebClient.Extensions.Routing
 
 
 @{
@@ -11,5 +13,40 @@
         }
 
         var store = StoreHelper.StoreClient.GetCurrentStore();
+
+        if (store != null && store.Languages != null && store.Languages.Count  > 1)
+        {
+            var currentCulture = CultureInfo.CreateSpecificCulture(UICulture);
+            <li>
+                <div class="language">
+                    <span>
+                        @("Language"):
+                        <span class="current">
+                            @currentCulture.NativeName.Substring(0, currentCulture.NativeName.IndexOf('(')).Trim()
+                        </span>
+                    </span>
+                    <ul>
+                        @foreach (var lang in store.Languages)
+                        {
+                            var culture = CultureInfo.CreateSpecificCulture(lang.LanguageCode);
+                            tempValues[RouteConstatnts.Constants.Language] = culture.Name;
+                            // tempValues[RouteConstatnts.Constants.Store] = SettingsHelper.SeoEncode
+
+                            var countryCode = culture.Name.Substring(culture.Name.IndexOf('-') + 1).ToLowerInvariant();
+                            var liClass = string.Equals(culture.Name, UICulture, StringComparison.InvariantCultureIgnoreCase) ? " selected" : "";
+
+                            <li class="@liClass">
+                                <img src="~/Content/themes/default/images/blank.gif" class="flag flag-@countryCode" alt="@culture.NativeName">
+                                @Html.ActionLink(culture.NativeName.Substring(0, culture.NativeName.IndexOf('(')).Trim(), null, tempValues, new Dictionary<string, object>
+                                {
+                                    {"title", culture.NativeName}
+                                })
+                            </li>
+                            
+                        }
+                    </ul>
+                </div>
+            </li>
+        }
     }
 }

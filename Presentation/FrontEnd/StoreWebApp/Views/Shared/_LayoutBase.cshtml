@@ -33,10 +33,10 @@
                         <div class="head-switch">
                             <span>
                                 @("Store"):
-                            <span class="current">
-                                @{ Html.RenderPartial("StoreParams");}
+                                <span class="current">
+                                    @{ Html.RenderPartial("StoreParams");}
+                                </span>
                             </span>
-                        </span>
                             <ul>
                                 @{Html.RenderPartial("Languages");}
                             </ul>
@@ -46,9 +46,23 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        @RenderBody()
-    </div>
+        <div class="article-wrap">
+            <div class="rubber">
+                @RenderBody()
+            </div>
+           
+        </div>
+        
+        
+        @{
+            Html.RenderAction("Footer", "Store", true);
+        }
+    </div> @*end of div id="layout"*@
+  
+    
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquerymisc")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

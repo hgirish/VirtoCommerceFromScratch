@@ -235,7 +235,9 @@
     <Content Include="Content\themes\default\images\social\twitter.png" />
     <Content Include="Content\themes\default\images\social\yahoo.png" />
     <Content Include="Content\themes\default\images\validation_advice_bg.gif" />
+    <Content Include="Content\themes\default\main.css" />
     <Content Include="Content\themes\default\reset.css" />
+    <Content Include="Content\themes\default\responsive.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Icon.png" />
@@ -284,6 +286,7 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -299,6 +302,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\StoreParams.cshtml" />
     <Content Include="Views\Shared\Languages.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -314,6 +318,10 @@
     <ProjectReference Include="..\..\..\Core\CommerceFoundation\CommerceFoundation.csproj">
       <Project>{51175861-991B-4C73-8E08-D793F966B462}</Project>
       <Name>CommerceFoundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Extensions\Client\CommerceClient\CommerceClient.csproj">
+      <Project>{BF659D12-8F96-4B07-99C8-7A4BA6D34DB0}</Project>
+      <Name>CommerceClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Extensions\Client\CommerceWebClient\CommerceWebClient.csproj">
       <Project>{840F0071-FDFE-47BF-83EB-9AF383CF1671}</Project>

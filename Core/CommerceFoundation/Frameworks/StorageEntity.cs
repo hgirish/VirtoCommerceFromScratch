@@ -12,7 +12,7 @@ using System.Runtime.Serialization;
 namespace CommerceFoundation.Frameworks
 {
     [DataContract(IsReference = true)]
-   // [IgnoreProperties("Error")]
+  //  [IgnoreProperties("Error")]
     public abstract class StorageEntity : INotifyPropertyChanging, INotifyPropertyChanged, IValidatable, IModifiedDateTimeFields
     {
         /// <summary>

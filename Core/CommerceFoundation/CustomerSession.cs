@@ -8,11 +8,7 @@ namespace CommerceFoundation
        public string Currency { get; set; }
 
        readonly Hashtable _hash = new Hashtable();
-       /// <summary>
-       /// Gets or sets the <see cref="System.Object"/> with the specified key.
-       /// </summary>
-       /// <param name="key">The key.</param>
-       /// <returns>System.Object.</returns>
+    
        public object this[string key]
        {
            get

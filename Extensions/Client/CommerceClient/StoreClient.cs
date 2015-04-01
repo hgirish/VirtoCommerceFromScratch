@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using CommerceFoundation.Customers.Services;
-using CommerceFoundation.Frameworks;
 using CommerceFoundation.Stores;
 
 namespace CommerceClient
@@ -34,8 +32,7 @@ namespace CommerceClient
         {
             var allStores = GetStores();
             return
-                allStores.Where(x => x.StoreId.Equals(storeId, StringComparison.OrdinalIgnoreCase) || storeId == "")
-                    .FirstOrDefault();
+                allStores.FirstOrDefault(x => x.StoreId.Equals(storeId, StringComparison.OrdinalIgnoreCase) || storeId == "");
         }
 
         private Store[] GetStores()
@@ -43,7 +40,7 @@ namespace CommerceClient
             return new Store[0];
         }
 
-        CacheHelper _cacheHelper;
+       // CacheHelper _cacheHelper;
         //public CacheHelper Helper
         //{
         //    get { return _cacheHelper ?? (_cacheHelper = new CacheHelper(_cacheRepository)); }

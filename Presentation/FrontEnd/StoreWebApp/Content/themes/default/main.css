@@ -1,0 +1,35 @@
+﻿.rubber {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.header-wrap
+{
+    background: #fff;
+    /*height: 127px;*/
+    position: relative;
+    z-index: 5000;
+}
+.demo-notice
+{
+    background: #d75f07;
+    padding: 6px 10px;
+    text-align: center;
+    display: none;
+}
+    .demo-notice p
+    {
+        color: #fff;
+        font-family: Arial;
+        font-size: 12px;
+        line-height: 1.15; 
+    }
+    .footer-wrap
+{
+    background: #322c29;
+}
+    .footer-wrap .banners
+{
+    background: #f7f7f6;
+    padding: 25px 0;
+}
