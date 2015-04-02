@@ -65,6 +65,7 @@
     <Compile Include="Frameworks\CacheHelper.cs" />
     <Compile Include="Frameworks\Configuration.cs" />
     <Compile Include="Frameworks\DoNotSerializeAttribute.cs" />
+    <Compile Include="Frameworks\Extensions\AssemblyExtensions.cs" />
     <Compile Include="Frameworks\IModifiedDateTimeFields.cs" />
     <Compile Include="Frameworks\IValidatable.cs" />
     <Compile Include="Frameworks\StorageEntity.cs" />
