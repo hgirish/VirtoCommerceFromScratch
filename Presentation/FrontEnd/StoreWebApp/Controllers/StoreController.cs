@@ -17,5 +17,11 @@ namespace StoreWebApp.Controllers
         {
             return PartialView("_Footer");
         }
+
+        [ChildActionOnly]
+        public ActionResult Menu()
+        {
+            return PartialView("_Menu");
+        }
     }
 }

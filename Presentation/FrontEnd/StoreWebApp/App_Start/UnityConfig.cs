@@ -39,7 +39,7 @@ namespace StoreWebApp.App_Start
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<ICustomerSessionService, CustomerSessionService>();
-
+            MvcSiteMapProviderConfig.Register(container);
         }
     }
 }

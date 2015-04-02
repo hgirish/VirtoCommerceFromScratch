@@ -17,6 +17,8 @@ namespace StoreWebApp
             AreaRegistration.RegisterAllAreas();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+           
         }
     }
 }

@@ -43,8 +43,20 @@
 
                         </div>
                     </div>
+                    <div>
+                        <ul class="head-links"></ul>
+                    </div>
                 </div>
             </div>
+            <header role="banner" class="header">
+                <div class="rubber clearfix">
+                    <div class="grid_12">
+                        <p></p>
+                        @RenderSection("Navigation", false)
+                        @RenderSection("MiniActions", false)
+                    </div>
+                </div>
+            </header>
         </div>
         <div class="article-wrap">
             <div class="rubber">
