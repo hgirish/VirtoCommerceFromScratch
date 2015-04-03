@@ -1,4 +1,5 @@
 using System;
+using CommerceClient.Globalization;
 using CommerceFoundation.Customers.Services;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
@@ -39,6 +40,7 @@ namespace StoreWebApp.App_Start
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<ICustomerSessionService, CustomerSessionService>();
+            container.RegisterType<IElementRepository, DatabaseElementRepository>(new PerRequestLifetimeManager());
             MvcSiteMapProviderConfig.Register(container);
         }
     }

@@ -1,4 +1,6 @@
 ﻿@using System.Web.Optimization
+@using CommerceWebClient.Extensions
+@using StoreWebApp.Models
 @using StoreWebApp.Virto.Helpers.MVC
 <!DOCTYPE html>
 
@@ -13,9 +15,11 @@
     @Styles.Render("~/Content/themes/base/css")
     @Styles.Render("~/Content/themes/default/css")
     @StoreStyle.Render("~/Content/themes/{0}/css")
+    <!--[if lt IE 9 ]> <link type="text/css" rel="stylesheet" href="~/Content/themes/default/iefix.css" />   <![endif]-->
     <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic-ext,cyrillic" />
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/responsive")
   
     <base href="~/" />
 </head>
@@ -60,6 +64,29 @@
         </div>
         <div class="article-wrap">
             <div class="rubber">
+                @{
+                    var messages = Html.SharedViewBag().Messsages as MessagesModel;
+                }
+                <ul id="messages" class="messages" style="@(messages != null && messages.Any() ? "" : "display:none;")">
+                    @{
+                        if (messages != null && messages.Any())
+                        {
+
+                            foreach (var messageGrp in messages.GroupBy(m => m.Type))
+                            {
+                                <li class="@messageGrp.Key.ToString().ToLower()">
+                                    <ul>
+                                        @foreach (var message in messageGrp)
+                                        {
+                                            <li><span>@message.Text</span></li>
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    }
+                </ul>
+
                 @RenderBody()
             </div>
            

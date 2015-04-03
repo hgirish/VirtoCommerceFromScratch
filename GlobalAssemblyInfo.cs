@@ -15,6 +15,9 @@ using System.Reflection;
 [assembly: AssemblyFileVersion("1.13.1086.0")]
 [assembly: AssemblyVersion("1.13.0.0")]
 [assembly: AssemblyInformationalVersion("1.13")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
