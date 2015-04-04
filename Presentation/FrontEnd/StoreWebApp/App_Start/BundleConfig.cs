@@ -17,14 +17,23 @@ namespace StoreWebApp
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquerymisc").Include(
-        //"~/Scripts/v/virto-jquery.js",
-       // "~/Scripts/cloudzoom.js",
-       // "~/Scripts/ajaxq.js",
-        //"~/Scripts/jquery.rateit.js",
-       // "~/Scripts/v/virto-commerce.js",
-        "~/Scripts/responsive/main.js"
-       // "~/Scripts/v/validation.js"
+        "~/Scripts/v/virto-jquery.js",
+        "~/Scripts/cloudzoom.js",
+        "~/Scripts/ajaxq.js",
+        "~/Scripts/jquery.rateit.js",
+        "~/Scripts/v/virto-commerce.js",
+        "~/Scripts/responsive/main.js",
+        "~/Scripts/v/validation.js"
        ));
+
+            bundles.Add(new ScriptBundle("~/bundles/responsive").Include(
+               "~/Scripts/responsive/virto.slider.js",
+               "~/Scripts/responsive/main.slider.js",
+               "~/Scripts/responsive/camera.js",
+               "~/Scripts/responsive/jquery.easing.{version}.js"
+               ));
+
+
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));

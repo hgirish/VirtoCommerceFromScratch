@@ -89,7 +89,7 @@
 
                 @RenderBody()
             </div>
-           
+           @RenderSection("Bottom", false)
         </div>
         
         
@@ -103,5 +103,27 @@
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/jquerymisc")
     @RenderSection("scripts", required: false)
+
+<script type="text/javascript">
+    $(function() {
+        if (VirtoCommerce.getCookie("vc.hideDemoNotice") !== "true") {
+            $('.demo-notice').show();
+        }
+        $('.demo-notice').on('click', function() {
+            $(this).fadeOut();
+            VirtoCommerce.setCookie("vcf.hideDemoNotice", true, 7);
+        });
+        $(document).ajaxError(
+            function myErrorHandler(event, xhr, ajaxOptions, thrownError) {
+                if (ajaxOptions.suppressErrors) {
+                    return;
+                }
+                if (xhr.status !== 0) {
+                    $.showPopupMessage("There was an error: <br /><span style='color:red;'>" + xhr.status + " " + xhr.statusText + "!</span>");
+                }
+            }
+        );
+    });
+</script>
 </body>
 </html>

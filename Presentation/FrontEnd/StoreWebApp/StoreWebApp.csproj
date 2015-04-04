@@ -300,6 +300,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\v\virto-commerce.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -363,6 +364,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\responsive\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommerceFoundation\CommerceFoundation.csproj">
