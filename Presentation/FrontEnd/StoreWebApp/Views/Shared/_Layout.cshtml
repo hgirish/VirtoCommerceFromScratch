@@ -1,6 +1,12 @@
-﻿@{
+﻿@using CommerceWebClient.Extensions
+@{
     Layout = "_LayoutBase.cshtml";
 }
+
+@this.RedefineSection("Slider")
+@this.RedefineSection("PageTitle")
+@this.RedefineSection("scripts")
+@this.RedefineSection("Bottom")
 
 @RenderBody()
 

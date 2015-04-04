@@ -1,4 +1,6 @@
-﻿using CommerceFoundation.Stores;
+﻿using System;
+using CommerceFoundation.Frameworks.Tagging;
+using CommerceFoundation.Stores;
 
 namespace CommerceFoundation
 {
@@ -7,6 +9,8 @@ namespace CommerceFoundation
         string StoreId { get; set; }
         string StoreName { get; set; }
         string Currency { get; set; }
+        DateTime CurrentDateTime { get; set; }
         object this[string key] { get; set; }
+        TagSet GetCustomerTagSet();
     }
 }

@@ -1,6 +1,9 @@
 using System;
 using CommerceClient.Globalization;
 using CommerceFoundation.Customers.Services;
+using CommerceFoundation.Frameworks;
+using CommerceFoundation.Marketing.Services;
+using HttpCache;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 
@@ -41,6 +44,9 @@ namespace StoreWebApp.App_Start
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<ICustomerSessionService, CustomerSessionService>();
             container.RegisterType<IElementRepository, DatabaseElementRepository>(new PerRequestLifetimeManager());
+            container.RegisterType<ICacheRepository, HttpCacheRepository>();
+            container.RegisterType<IDynamicContentService, DynamicContentService>();
+
             MvcSiteMapProviderConfig.Register(container);
         }
     }

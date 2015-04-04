@@ -316,6 +316,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -325,6 +326,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BannerModel.cs" />
     <Compile Include="Models\MessageModel.cs" />
     <Compile Include="Models\MessagesModel.cs" />
     <Compile Include="Models\MessageType.cs" />
@@ -370,6 +372,10 @@
     <ProjectReference Include="..\..\..\Core\CommerceFoundation\CommerceFoundation.csproj">
       <Project>{51175861-991B-4C73-8E08-D793F966B462}</Project>
       <Name>CommerceFoundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Extensions\Cahce\HttpCache\HttpCache.csproj">
+      <Project>{9899742E-A442-45DD-9F8D-883A3BD7620E}</Project>
+      <Name>HttpCache</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Extensions\Client\CommerceClient\CommerceClient.csproj">
       <Project>{BF659D12-8F96-4B07-99C8-7A4BA6D34DB0}</Project>
