@@ -290,6 +290,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Mvc.sitemap" />
+    <Content Include="App_Data\Virto\Configuration\DynamicContent.config" />
+    <Content Include="App_Data\Virto\Configuration\connectionStrings.local.config" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -340,9 +342,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BannerModel.cs" />
+    <Compile Include="Models\CategoryUrlModel.cs" />
+    <Compile Include="Models\FlashModel.cs" />
+    <Compile Include="Models\ImageClickableModel.cs" />
+    <Compile Include="Models\ImageNonClickableModel.cs" />
     <Compile Include="Models\MessageModel.cs" />
     <Compile Include="Models\MessagesModel.cs" />
     <Compile Include="Models\MessageType.cs" />
+    <Compile Include="Models\ProductWithImageAndPriceModel.cs" />
+    <Compile Include="Models\RawHtmlModel.cs" />
+    <Compile Include="Models\RazorHtmlModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Virto\Helpers\MVC\StoreStyle.cs" />
     <Compile Include="Virto\Helpers\UserHelper.cs" />
@@ -370,6 +379,15 @@
     <Content Include="Views\Error\StoreClosed.cshtml" />
     <Content Include="Views\Shared\FailWhale.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\BaseContentPlace.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\CategoryUrl.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\Flash.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\ImageClick.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\ImageClickSlide.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\ImageNoClick.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\ImageNoClickSlide.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\ProductImageAndPrice.cshtml" />
+    <Content Include="Views\Banner\DisplayTemplates\RawHtml.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -377,9 +395,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommerceFoundation.Data\CommerceFoundation.Data.csproj">
       <Project>{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}</Project>

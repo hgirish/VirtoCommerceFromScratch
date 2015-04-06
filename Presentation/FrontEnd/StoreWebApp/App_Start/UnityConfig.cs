@@ -1,4 +1,5 @@
 using System;
+using CommerceClient;
 using CommerceClient.Globalization;
 using CommerceFoundation.Customers.Services;
 using CommerceFoundation.Data.Marketing;
@@ -44,6 +45,8 @@ namespace StoreWebApp.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType<DynamicContentClient>();
             container.RegisterType<ICustomerSessionService, CustomerSessionService>();
             container.RegisterType<IElementRepository, DatabaseElementRepository>(new PerRequestLifetimeManager());
             container.RegisterType<ICacheRepository, HttpCacheRepository>();

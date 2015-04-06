@@ -1,13 +1,31 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Services.Common;
 using System.Runtime.Serialization;
 using CommerceFoundation.Frameworks;
 
 namespace CommerceFoundation.Marketing.Model.DynamicContent
 {
+    [DataContract]
+    [EntitySet("DynamicContentPublishingGroups")]
+    [DataServiceKey("DynamicContentPublishingGroupId")]
     public class DynamicContentPublishingGroup : StorageEntity
     {
+        public DynamicContentPublishingGroup()
+        {
+            _dynamicContentPublishingGroupId = GenerateNewKey();
+        }
+        private string _dynamicContentPublishingGroupId;
+        [Key]
+        [StringLength(128, ErrorMessage = "Only 128 characters allowed.")]
+        [DataMember]
+        public string DynamicContentPublishingGroupId
+        {
+            get { return _dynamicContentPublishingGroupId; }
+            set { SetValue(ref _dynamicContentPublishingGroupId, () => DynamicContentPublishingGroupId, value); }
+        }
+
         private int _priority;
         [DataMember]
         public int Priority

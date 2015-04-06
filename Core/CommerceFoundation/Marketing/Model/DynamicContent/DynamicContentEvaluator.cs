@@ -14,7 +14,7 @@ namespace CommerceFoundation.Marketing.Model.DynamicContent
         private readonly IDynamicContentRepository _repository;
         public const string DynamicContentCacheKey = "M:D:{0}";
         private static bool IsEnabled = false;
-        public DynamicContentEvaluator(IDynamicContentRepository repository)
+        public DynamicContentEvaluator(IDynamicContentRepository repository, ICacheRepository cache):base(cache)
         {
             _repository = repository;
         }
@@ -86,12 +86,26 @@ namespace CommerceFoundation.Marketing.Model.DynamicContent
         }
         private IQueryable<DynamicContentPlace> GetPlaces()
         {
-            throw new NotImplementedException();
+            var query = _repository.Places;
+            var fallbackQuery = new DynamicContentPlace[] {};
+            
+                return Cache.Get(
+                    CacheHelper.CreateCacheKey(Constants.DynamicContentCachePrefix, string.Format(DynamicContentCacheKey, "allPlaces")),
+                    () => query != null ? (query).ToArray() : fallbackQuery,
+                    DynamicContentConfiguration.Instance != null ? DynamicContentConfiguration.Instance.Cache.DynamicContentTimeout : new TimeSpan(),
+                    IsEnabled).AsQueryable();
+
+            return fallbackQuery.AsQueryable();
         }
 
         private IQueryable<DynamicContentPublishingGroup> GetPublishingGroups()
         {
-            throw new NotImplementedException();
+            var query = _repository.PublishingGroups.Expand(g => g.ContentPlaces.Select(c => c.ContentPlace)).Expand(g => g.ContentItems);
+            return Cache.Get(
+                CacheHelper.CreateCacheKey(Constants.DynamicContentCachePrefix, string.Format(DynamicContentCacheKey, "allGroups")),
+                () => (query).ToArray(),
+                DynamicContentConfiguration.Instance != null ? DynamicContentConfiguration.Instance.Cache.DynamicContentTimeout : new TimeSpan(),
+                IsEnabled).AsQueryable();
         }
     }
 }

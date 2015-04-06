@@ -11,6 +11,10 @@ namespace CommerceFoundation.Frameworks
         public const string ExpressionCacheKey = "EXPR:{0}";
         private static readonly ObjectCache _memoryCache = MemoryCache.Default;
 
+        protected EvaluatorBase(ICacheRepository cache)
+        {
+            Cache = new CacheHelper(cache);
+        }
 
         private ExpressionSerializer _expressionSerializer;
         private ExpressionSerializer ExpressionSerializer

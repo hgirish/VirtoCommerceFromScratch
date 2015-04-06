@@ -29,5 +29,14 @@ namespace CommerceFoundation.Marketing
                 return (CacheConfiguration)this["Cache"];
             }
         }
+
+        [ConfigurationProperty("Connection", IsRequired = true)]
+        public DynamicContentConnection Connection
+        {
+            get
+            {
+                return (DynamicContentConnection)this["Connection"];
+            }
+        }
     }
 }

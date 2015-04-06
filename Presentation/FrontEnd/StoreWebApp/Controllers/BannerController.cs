@@ -9,6 +9,10 @@ namespace StoreWebApp.Controllers
     {
         private readonly DynamicContentClient _contentHelper;
 
+        public BannerController()
+        {
+            
+        }
         public BannerController(DynamicContentClient contentHelper)
         {
             _contentHelper = contentHelper;
