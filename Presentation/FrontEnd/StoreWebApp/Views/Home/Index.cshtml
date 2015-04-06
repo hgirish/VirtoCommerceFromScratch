@@ -19,7 +19,24 @@
             <h2>Staff Pick</h2>
         </header>
         <ul class="products-list slider-list grid">
-            @Html.Action("ShowDynamicContent", "Banner",new{placeName="HomeStaffPick"})
+            @Html.Action("ShowDynamicContent", "Banner", new {placeName = "HomeStaffPick"})
+        </ul>
+    </div>
+
+    <div class="products featured">
+        <header>
+            <h2>Featured Products</h2>
+        </header>
+        <ul class="products-list grid">
+            @Html.Action("ShowDynamicContent", "Banner", new {placeName = "HomeFeaturedProducts"})
+        </ul>
+    </div>
+    <div class="products slider-products new-products">
+        <header>
+            <h2>New Products</h2>
+        </header>
+        <ul class="products-list slider-list grid">
+            @Html.Action("ShowDynamicContent", "Banner", new { placeName = "HomeNewProducts" })
         </ul>
     </div>
 </div>
@@ -38,3 +55,24 @@
         </form>
     </aside>
 </div>
+
+@section Scripts{
+    <script>
+        $(function() {
+            VirtoCommerce.registerDynamicContent("MainSlider", function(data) {
+                $('.main-slider .container').html(data);
+                VirtoCommerce.initSliders();
+            });
+            VirtoCommerce.registerDynamicContent("HomeNewProducts", function(data) {
+                $('div.new-products ul.products-list').html(data);
+                $('div.new-products').virtoSlider();
+            });
+            VirtoCommerce.registerDynamicContent("HomeStaffPick", function(data) {
+                $('div.staff-pick ul.products-list').html(data);
+                $('div.staff-pick').virtoSlider();
+            });
+            VirtoCommerce.registerDynamicContent("HomeFeaturedProducts", 'div.featured ul.products-list');
+
+        });
+    </script>
+}

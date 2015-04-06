@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceClient", "Extension
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpCache", "Extensions\Cahce\HttpCache\HttpCache.csproj", "{9899742E-A442-45DD-9F8D-883A3BD7620E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceFoundation.Data", "Core\CommerceFoundation.Data\CommerceFoundation.Data.csproj", "{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{9899742E-A442-45DD-9F8D-883A3BD7620E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9899742E-A442-45DD-9F8D-883A3BD7620E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9899742E-A442-45DD-9F8D-883A3BD7620E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,5 +116,6 @@ Global
 		{51175861-991B-4C73-8E08-D793F966B462} = {D5FACE23-4693-4CC0-9925-84428597A730}
 		{BF659D12-8F96-4B07-99C8-7A4BA6D34DB0} = {C6E270C2-EC56-4EA5-8813-E92D4709456B}
 		{9899742E-A442-45DD-9F8D-883A3BD7620E} = {2013C8C7-E7E1-4628-AF6F-7902AFD7BBA1}
+		{A9D43E71-EA51-4CFD-AD6F-899E4145EA99} = {D5FACE23-4693-4CC0-9925-84428597A730}
 	EndGlobalSection
 EndGlobal

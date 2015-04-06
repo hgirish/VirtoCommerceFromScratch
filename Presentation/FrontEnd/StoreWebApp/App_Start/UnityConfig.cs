@@ -1,11 +1,13 @@
 using System;
 using CommerceClient.Globalization;
 using CommerceFoundation.Customers.Services;
+using CommerceFoundation.Data.Marketing;
 using CommerceFoundation.Frameworks;
+using CommerceFoundation.Marketing.Model.DynamicContent;
+using CommerceFoundation.Marketing.Repositories;
 using CommerceFoundation.Marketing.Services;
 using HttpCache;
 using Microsoft.Practices.Unity;
-using Microsoft.Practices.Unity.Configuration;
 
 namespace StoreWebApp.App_Start
 {
@@ -46,6 +48,11 @@ namespace StoreWebApp.App_Start
             container.RegisterType<IElementRepository, DatabaseElementRepository>(new PerRequestLifetimeManager());
             container.RegisterType<ICacheRepository, HttpCacheRepository>();
             container.RegisterType<IDynamicContentService, DynamicContentService>();
+
+
+            container.RegisterType<IDynamicContentService, DynamicContentService>();
+            container.RegisterType<IDynamicContentRepository, EfDynamicContentRepository>(new PerRequestLifetimeManager());
+            container.RegisterType<IDynamicContentEvaluator, DynamicContentEvaluator>();
 
             MvcSiteMapProviderConfig.Register(container);
         }

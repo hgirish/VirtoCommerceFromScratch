@@ -32,7 +32,7 @@ namespace CommerceClient
                 if (DynamicContentConfiguration.Instance != null)
                     return Helper.Get(
                         CacheHelper.CreateCacheKey(
-                            Constants.DynamciContentCachePrefix,
+                            Constants.DynamicContentCachePrefix,
                             string.Format(DynamicContentCacheKey,
                                 placeName, session.CurrentDateTime, tags.GetCacheKey())),
                         () => _service.GetItems(placeName, session.CurrentDateTime, tags),

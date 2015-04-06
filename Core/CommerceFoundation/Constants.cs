@@ -2,6 +2,7 @@
 {
     public static  class Constants
     {
-        public const string DynamciContentCachePrefix = "_DynamicContentCache";
+        public const string DynamicContentCachePrefix = "_DynamicContentCache";
+
     }
 }

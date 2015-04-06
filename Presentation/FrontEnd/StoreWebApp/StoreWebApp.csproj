@@ -42,6 +42,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -300,6 +308,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\responsive\camera.js" />
+    <Content Include="Scripts\responsive\jquery.easing.1.3.js" />
+    <Content Include="Scripts\responsive\main.js" />
+    <Content Include="Scripts\responsive\main.slider.js" />
+    <Content Include="Scripts\responsive\virto.slider.js" />
     <Content Include="Scripts\v\virto-commerce.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -366,9 +379,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\responsive\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\CommerceFoundation.Data\CommerceFoundation.Data.csproj">
+      <Project>{A9D43E71-EA51-4CFD-AD6F-899E4145EA99}</Project>
+      <Name>CommerceFoundation.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\CommerceFoundation\CommerceFoundation.csproj">
       <Project>{51175861-991B-4C73-8E08-D793F966B462}</Project>
       <Name>CommerceFoundation</Name>

@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpressionSerialization">
+      <HintPath>..\..\Shared\ExpressionSerialization.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -46,6 +55,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -62,23 +72,43 @@
     <Compile Include="..\..\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="AppConfig\AppConfigConfiguration.cs" />
+    <Compile Include="AppConfig\AppConfigConnection.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="CustomerSession.cs" />
     <Compile Include="Customers\Services\CustomerSessionService.cs" />
     <Compile Include="Customers\Services\ICustomerSessionService.cs" />
+    <Compile Include="Frameworks\Attributes\ParentAttribute.cs" />
+    <Compile Include="Frameworks\BaseEvaluationContext.cs" />
     <Compile Include="Frameworks\CacheHelper.cs" />
     <Compile Include="Frameworks\Configuration.cs" />
     <Compile Include="Frameworks\DoNotSerializeAttribute.cs" />
+    <Compile Include="Frameworks\EvaluatorBase.cs" />
     <Compile Include="Frameworks\Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Frameworks\Extensions\IQueryableExtensions.cs" />
     <Compile Include="Frameworks\ICacheRepository.cs" />
+    <Compile Include="Frameworks\IEvaluationContext.cs" />
+    <Compile Include="Frameworks\IFactory.cs" />
     <Compile Include="Frameworks\IModifiedDateTimeFields.cs" />
+    <Compile Include="Frameworks\IRepository.cs" />
+    <Compile Include="Frameworks\IUnitOfWork.cs" />
     <Compile Include="Frameworks\IValidatable.cs" />
+    <Compile Include="Frameworks\ParentValidator.cs" />
     <Compile Include="Frameworks\StorageEntity.cs" />
     <Compile Include="Frameworks\Tagging\TagSet.cs" />
     <Compile Include="ICustomerSession.cs" />
     <Compile Include="Marketing\CacheConfiguration.cs" />
     <Compile Include="Marketing\DynamicContentConfiguration.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\DynamicContentEvaluationContext.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\DynamicContentEvaluator.cs" />
     <Compile Include="Marketing\Model\DynamicContent\DynamicContentItem.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\DynamicContentPlace.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\DynamicContentPublishingGroup.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\IDynamicContentEvaluationContext.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\IDynamicContentEvaluator.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\PublishingGroupContentItem.cs" />
+    <Compile Include="Marketing\Model\DynamicContent\PublishingGroupContentPlace.cs" />
+    <Compile Include="Marketing\Repositories\IDynamicContentRepository.cs" />
     <Compile Include="Marketing\Services\DynamicContentService.cs" />
     <Compile Include="Marketing\Services\IDynamicContentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +116,7 @@
     <Compile Include="Stores\Store.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
