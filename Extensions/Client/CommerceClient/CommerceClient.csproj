@@ -46,11 +46,16 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="CatalogClient.cs" />
     <Compile Include="DynamicContentClient.cs" />
     <Compile Include="Globalization\DatabaseElementRepository.cs" />
     <Compile Include="Globalization\Element.cs" />
     <Compile Include="Globalization\IElementRepository.cs" />
     <Compile Include="Globalization\LocalizeExtension.cs" />
+    <Compile Include="ItemAvailability.cs" />
+    <Compile Include="ItemResponseGroups.cs" />
+    <Compile Include="ItemStoreAvailabity.cs" />
+    <Compile Include="PriceListClient.cs" />
     <Compile Include="StoreClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

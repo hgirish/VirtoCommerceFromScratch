@@ -47,6 +47,8 @@ namespace StoreWebApp.App_Start
             // container.RegisterType<IProductRepository, ProductRepository>();
 
             container.RegisterType<DynamicContentClient>();
+            container.RegisterType<CatalogClient>();
+
             container.RegisterType<ICustomerSessionService, CustomerSessionService>();
             container.RegisterType<IElementRepository, DatabaseElementRepository>(new PerRequestLifetimeManager());
             container.RegisterType<ICacheRepository, HttpCacheRepository>();

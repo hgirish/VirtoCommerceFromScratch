@@ -10,6 +10,7 @@ namespace CommerceFoundation
         string StoreName { get; set; }
         string Currency { get; set; }
         DateTime CurrentDateTime { get; set; }
+        string CatalogId { get; set; }
         object this[string key] { get; set; }
         TagSet GetCustomerTagSet();
     }

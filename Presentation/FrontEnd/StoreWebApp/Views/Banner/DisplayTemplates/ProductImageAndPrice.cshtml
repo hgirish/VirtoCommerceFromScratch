@@ -7,6 +7,6 @@
 @if (currentModel != null)
 {
     <p>@currentModel.ProductCode</p>
-    @*@Html.Action("DisplayItemNoCache", "Catalog", new { itemId = currentModel.ProductCode, bycode = true, displayOptions = ItemDisplayOptions.ItemMedium, name = "DisplayTemplates/Item" })*@
+    @Html.Action("DisplayItemNoCache", "Catalog", new { itemId = currentModel.ProductCode, bycode = true, displayOptions = ItemDisplayOptions.ItemMedium, name = "DisplayTemplates/Item" })
 }
 

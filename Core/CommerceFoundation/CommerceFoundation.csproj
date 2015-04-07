@@ -74,6 +74,17 @@
     </Compile>
     <Compile Include="AppConfig\AppConfigConfiguration.cs" />
     <Compile Include="AppConfig\AppConfigConnection.cs" />
+    <Compile Include="Catalogs\CatalogConfiguration.cs" />
+    <Compile Include="Catalogs\CatalogConnection.cs" />
+    <Compile Include="Catalogs\Model\Category.cs" />
+    <Compile Include="Catalogs\Model\CategoryBase.cs" />
+    <Compile Include="Catalogs\Model\Item.cs" />
+    <Compile Include="Catalogs\Model\Price.cs" />
+    <Compile Include="Catalogs\Model\PropertySet.cs" />
+    <Compile Include="Catalogs\Repositories\ICatalogRepository.cs" />
+    <Compile Include="Catalogs\Services\CatalogOutline.cs" />
+    <Compile Include="Catalogs\Services\CatalogOutlines.cs" />
+    <Compile Include="Catalogs\Services\ICatalogOutlineBuilder.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="CustomerSession.cs" />
     <Compile Include="Customers\Services\CustomerSessionService.cs" />

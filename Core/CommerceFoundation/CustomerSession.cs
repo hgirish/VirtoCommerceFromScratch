@@ -26,6 +26,8 @@ namespace CommerceFoundation
            }
        }
 
+       public string CatalogId { get; set; }
+
        readonly Hashtable _hash = new Hashtable();
     
        public object this[string key]

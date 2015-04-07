@@ -53,5 +53,19 @@ namespace CommerceFoundation.Frameworks
             }
             return returnKey.ToString();
         }
+
+        public static string CreateCacheKey(params string[] keys)
+        {
+            var returnKey = new StringBuilder();
+
+            if (keys != null)
+                foreach (var key in keys)
+                {
+                    returnKey.Append("-");
+                    returnKey.Append(key);
+                }
+
+            return returnKey.ToString();
+        }
     }
 }
