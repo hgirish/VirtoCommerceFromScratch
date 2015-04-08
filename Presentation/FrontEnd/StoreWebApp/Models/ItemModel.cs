@@ -1,4 +1,5 @@
 using System;
+using CommerceFoundation.Catalogs.Model;
 using CommerceFoundation.Catalogs.Services;
 
 namespace StoreWebApp.Models
@@ -133,5 +134,6 @@ namespace StoreWebApp.Models
         public string ParentItemId { get; set; }
 
         public CatalogOutlines CatalogOutlines { get; set; }
+        public Item Item { get; set; }
     }
 }

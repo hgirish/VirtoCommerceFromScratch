@@ -77,6 +77,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\..\..\packages\ValueInjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -357,6 +360,7 @@
     <Compile Include="Models\MessagesModel.cs" />
     <Compile Include="Models\MessageType.cs" />
     <Compile Include="Models\PriceModel.cs" />
+    <Compile Include="Models\PriceType.cs" />
     <Compile Include="Models\ProductWithImageAndPriceModel.cs" />
     <Compile Include="Models\RawHtmlModel.cs" />
     <Compile Include="Models\RazorHtmlModel.cs" />
@@ -398,6 +402,7 @@
     <Content Include="Views\Banner\DisplayTemplates\ImageNoClickSlide.cshtml" />
     <Content Include="Views\Banner\DisplayTemplates\ProductImageAndPrice.cshtml" />
     <Content Include="Views\Banner\DisplayTemplates\RawHtml.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Item.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

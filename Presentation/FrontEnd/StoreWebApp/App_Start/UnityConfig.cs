@@ -1,7 +1,9 @@
 using System;
 using CommerceClient;
 using CommerceClient.Globalization;
+using CommerceFoundation.Catalogs.Repositories;
 using CommerceFoundation.Customers.Services;
+using CommerceFoundation.Data.Catalogs;
 using CommerceFoundation.Data.Marketing;
 using CommerceFoundation.Frameworks;
 using CommerceFoundation.Marketing.Model.DynamicContent;
@@ -53,7 +55,8 @@ namespace StoreWebApp.App_Start
             container.RegisterType<IElementRepository, DatabaseElementRepository>(new PerRequestLifetimeManager());
             container.RegisterType<ICacheRepository, HttpCacheRepository>();
             container.RegisterType<IDynamicContentService, DynamicContentService>();
-
+            container.RegisterType<ICatalogRepository, EFCatalogRepository>(new PerRequestLifetimeManager());
+         
 
             container.RegisterType<IDynamicContentService, DynamicContentService>();
             container.RegisterType<IDynamicContentRepository, EfDynamicContentRepository>(new PerRequestLifetimeManager());

@@ -2,6 +2,6 @@
 {
     public class PriceModel
     {
-         
+        public PriceType Type { get; set; }
     }
 }

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogs\EFCatalogRepository.cs" />
     <Compile Include="Infrastructure\BasicUnitOfWork.cs" />
     <Compile Include="Infrastructure\ConnectionHelper.cs" />
     <Compile Include="Infrastructure\EFRepositoryBase.cs" />

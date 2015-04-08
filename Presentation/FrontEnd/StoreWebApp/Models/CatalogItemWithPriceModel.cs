@@ -15,12 +15,12 @@ namespace StoreWebApp.Models
         private PriceModel priceModel;
         private ItemAvailabilityModel itemAvaiability;
 
-        public CatalogItemWithPriceModel(ItemModel itemModel, PriceModel priceModel, ItemAvailabilityModel itemAvaiability)
+        public CatalogItemWithPriceModel(ItemModel item, PriceModel price,
+            ItemAvailabilityModel availability)
         {
-            // TODO: Complete member initialization
-            this.itemModel = itemModel;
-            this.priceModel = priceModel;
-            this.itemAvaiability = itemAvaiability;
+            _item = item;
+            _price = price;
+            _availability = availability;
         }
         /// <summary>
         /// The _price
@@ -56,7 +56,15 @@ namespace StoreWebApp.Models
 
         public string SearchOutline { get; set; }
 
-      
+        public bool IsNew { get; set; }
+        public bool IsSale { get; set; }
+        public string DisplayName { get; set; }
+        private readonly PriceModel _price;
+        public PriceModel Price
+        {
+            get { return _price; }
+        }
+
 
         /// <summary>
         /// Gets the <see cref="System.String"/> with the specified name.

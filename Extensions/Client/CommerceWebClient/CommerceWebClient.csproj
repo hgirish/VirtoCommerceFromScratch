@@ -94,6 +94,7 @@
     <Compile Include="Extensions\Routing\Routes\StoreRoute.cs" />
     <Compile Include="Extensions\SectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="PageData.cs" />
     <Compile Include="StoreHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

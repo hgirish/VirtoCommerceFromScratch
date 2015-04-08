@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 using System.Web.Mvc;
 using CommerceClient;
 using CommerceFoundation.Catalogs.Model;
 using CommerceFoundation.Catalogs.Services;
+using Omu.ValueInjecter;
 using StoreWebApp.Models;
 
 namespace StoreWebApp.Virto.Helpers
@@ -58,18 +60,19 @@ namespace StoreWebApp.Virto.Helpers
                     }
 
                     var itemModel = CreateItemModel(dbItem, propertySet);
-
-                    if (display.HasFlag(ItemDisplayOptions.ItemAvailability))
-                    {
-                        var fulfillmentCenter = UserHelper.StoreClient.GetCurrentStore().FulfillmentCenterId;
-                        var availability = CatalogClient.GetItemAvailability(dbItem.ItemId, fulfillmentCenter);
-                        itemAvaiability = new ItemAvailabilityModel(availability);
-                    }
+                    // TODO
+                    //if (display.HasFlag(ItemDisplayOptions.ItemAvailability))
+                    //{
+                    //    var fulfillmentCenter = UserHelper.StoreClient.GetCurrentStore().FulfillmentCenterId;
+                    //    var availability = CatalogClient.GetItemAvailability(dbItem.ItemId, fulfillmentCenter);
+                    //    itemAvaiability = new ItemAvailabilityModel(availability);
+                    //}
 
                     if (display.HasFlag(ItemDisplayOptions.ItemPrice))
                     {
                         var lowestPrice = PriceListClient.GetLowestPrice(dbItem.ItemId, itemAvaiability != null ? itemAvaiability.MinQuantity : 1);
-                        var outlines = OutlineBuilder.BuildCategoryOutline(CatalogClient.CustomerSession.CatalogId, dbItem.ItemId);
+                       // CatalogOutlines outlines = OutlineBuilder.BuildCategoryOutline(CatalogClient.CustomerSession.CatalogId, dbItem.ItemId);
+                        CatalogOutlines outlines = new CatalogOutlines();
                         var tags = new Hashtable
 							{
 								{
@@ -108,7 +111,13 @@ namespace StoreWebApp.Virto.Helpers
 
         private static ItemModel CreateItemModel(Item item, PropertySet propertySet)
         {
-            throw new System.NotImplementedException();
+            if (item == null)
+            {
+                throw new ArgumentNullException("item");
+            }
+            var model = new ItemModel { Item = item };
+            model.InjectFrom(item);
+            return model;
         }
     }
 }

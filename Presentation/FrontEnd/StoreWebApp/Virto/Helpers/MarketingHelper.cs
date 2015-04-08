@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using CommerceFoundation.Catalogs.Model;
 using StoreWebApp.Models;
 
@@ -8,7 +9,16 @@ namespace StoreWebApp.Virto.Helpers
     {
         public PriceModel GetItemPriceModel(Item item, Price lowestPrice, Hashtable tags)
         {
-            throw new System.NotImplementedException();
+            if (item == null)
+            {
+                throw new ArgumentNullException("item");
+            }
+
+            if (lowestPrice == null)
+            {
+                return new PriceModel();
+            }
+            return new PriceModel();
         }
     }
 }

@@ -80,6 +80,7 @@
     <Compile Include="Catalogs\Model\CategoryBase.cs" />
     <Compile Include="Catalogs\Model\Item.cs" />
     <Compile Include="Catalogs\Model\Price.cs" />
+    <Compile Include="Catalogs\Model\Product.cs" />
     <Compile Include="Catalogs\Model\PropertySet.cs" />
     <Compile Include="Catalogs\Repositories\ICatalogRepository.cs" />
     <Compile Include="Catalogs\Services\CatalogOutline.cs" />
